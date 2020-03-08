@@ -285,7 +285,7 @@ export default class JiraIssues {
     );
 
     // Fixes versions
-    if ( issue.fields.fixVersions.length ) {
+    if ( Array.isArray(issue.fields.fixVersions) && issue.fields.fixVersions.length ) {
       let versions = [];
       issue.fields.fixVersions.forEach(function( version ){
         versions.push( version.name );
