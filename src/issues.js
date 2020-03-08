@@ -484,16 +484,16 @@ export default class JiraIssues {
 
       const res = await inquirer.prompt(question);
 
-        transitionObj = {
+      transitionObj = {
           transition: {
             id: res.transition.id
           },
           to: res.transition.to
         };
-      }
 
-      return this.transitionIssue( issueId, transitionObj );
     }
+
+    return this.transitionIssue( issueId, transitionObj );
   }
 
   /**
